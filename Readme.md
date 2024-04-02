@@ -18,8 +18,8 @@
               Javascript Code (.js)
                 Runs Everywhere                  <-     Vanila Js Code
 
+  - Typescript is a dev dependency.
+  - If the datatype of the variable is `string` then only strings could be assign to it
 
-  - Typescript is a dev dependency
-  
 - `REACT`
 - `STORE`
