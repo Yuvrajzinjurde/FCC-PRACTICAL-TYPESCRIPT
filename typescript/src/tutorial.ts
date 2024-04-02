@@ -123,6 +123,15 @@ function namefinder(name:string)
 }
 
 
-
+// CHALLENGES
+function processInput(union:string | number){
+  if(typeof union === 'number'){
+    return 2*union;
+  }
+  else{
+    return union.toLocaleUpperCase();
+  }
+}
+processInput(24);
 
 
