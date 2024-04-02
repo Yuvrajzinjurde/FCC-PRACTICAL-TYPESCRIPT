@@ -43,7 +43,7 @@ const persons = ['2001','bravae kid born','on 14 dec'];
 let foundPerson;
 for(let person of  persons){
   if(person==='2001'){
-    foundPerson = person;
+  foundPerson = person;
     break;
   }
 }
@@ -62,6 +62,41 @@ let fruits:string[] = ["orrange" , 'grapes'];
 
 let names = ['raman','aman','suman',45];
 let array :(string|boolean)[] = ['santra','mango',true,false];
+
+
+// TYPE ANNOTATION
+
+let car:{
+  brand:string;
+  year:number
+}
+=
+{
+  brand :"TATA",
+  year:324
+};
+
+
+car.brand = "MAHINDRA";
+
+let car1:{
+  brand:string;
+  year:number
+}
+=
+{
+  brand:"Maruti",
+  year:2000
+}
+
+let book = {title:"book",price:10};
+let pen  = {title:"pens",price:5};
+let notebook  = {title:"notebok",price:50};
+
+let items :{
+  readonly title:string;cost?:number
+}[] =[book,pen,notebook]
+
 
 
 
