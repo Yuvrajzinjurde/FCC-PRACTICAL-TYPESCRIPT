@@ -1,6 +1,6 @@
 `TYPESCRIPT`
 
-- FUNDAMENTALS
+- `FUNDAMENTALS`
 
   - It is a superset of js.
   - all the javascript code is also a valid TS code
@@ -18,5 +18,5 @@
               Javascript Code (.js)
                 Runs Everywhere                  <-     Vanila Js Code
 
-- REACT
-- STORE
+- `REACT`
+- `STORE`
