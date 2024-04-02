@@ -49,3 +49,22 @@ for(let person of  persons){
 }
 console.log(foundPerson);
 
+// ARRAYS
+
+let prices:number[] = [100,34,35];
+
+// prices.push("can not push string as the type of array is number");
+
+let fruits:string[] = ["orrange" , 'grapes'];
+// fruits.push(43);    -- Can not push numbers in string type arrays
+
+// let emptyTypeArray:[] = ["can not assign values to it as its type is empty array"] 
+
+let names = ['raman','aman','suman',45];
+let array :(string|boolean)[] = ['santra','mango',true,false];
+
+
+
+
+
+

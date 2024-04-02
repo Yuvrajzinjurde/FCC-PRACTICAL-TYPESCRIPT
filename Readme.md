@@ -19,7 +19,14 @@
                 Runs Everywhere                  <-     Vanila Js Code
 
   - Typescript is a dev dependency.
-  - If the datatype of the variable is `string` then only strings could be assign to it
+
+  - `VARIABLES`
+
+    - If the datatype of the variable is `string` then only strings could be assign to it
+
+  - `ARRAYS`
+    - WE can create arrays of defferent data types.
+    - Values can not be assigned to the arrays of type empty array
 
 - `REACT`
 - `STORE`
