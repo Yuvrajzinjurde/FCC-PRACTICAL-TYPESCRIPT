@@ -166,3 +166,23 @@ function processaData(input :string | number,config:{reverse:boolean}={reverse:f
 // console.log(processaData(10));
 // console.log(processaData("Yuvraj"));
 console.log(processaData('yuvraj',{reverse:true}));
+
+
+//ALIAS AND INTERFACES
+
+type newUser = {
+  id:number;name:string;
+  isActive:boolean
+} ;
+
+const ChampakLAL :newUser={
+  id:12,
+  name:"Champaklal",
+  isActive:true
+}
+
+
+function creatingUsers(user:newUser):newUser{
+  console.log(`${user.name.toUpperCase()} is father of jethalal`);
+  return user;
+}
