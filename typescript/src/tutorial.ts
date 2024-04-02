@@ -129,9 +129,40 @@ function processInput(union:string | number){
     return 2*union;
   }
   else{
-    return union.toLocaleUpperCase();
+    return union.toUpperCase();
   }
 }
 processInput(24);
 
 
+//OBJECTS AS PARAMETERES
+
+
+function createEmployee({id}:{id:number}):{id:number;isActive :boolean;}{
+  return {id,isActive:id%2===0};
+}
+
+const first = createEmployee({id:1});
+const second = createEmployee({id:2});
+
+console.log(first,second);
+
+//CHALLENGES
+
+
+function processaData(input :string | number,config:{reverse:boolean}={reverse:false}):string|number{
+
+  if(typeof input ==='number'){
+    return input*input;
+  }
+  else if(config.reverse){
+    return input.split('').reverse().join('').toUpperCase();
+  }else{
+    return input.toUpperCase();
+  }
+  
+}
+
+// console.log(processaData(10));
+// console.log(processaData("Yuvraj"));
+console.log(processaData('yuvraj',{reverse:true}));
