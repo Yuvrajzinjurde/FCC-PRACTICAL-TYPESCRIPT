@@ -39,5 +39,13 @@ console.log(challengeVar3&&false);
 // challengeVar3 = 23;     -- can not assign number to boolean type variable
 
 
-
+const persons = ['2001','bravae kid born','on 14 dec'];
+let foundPerson;
+for(let person of  persons){
+  if(person==='2001'){
+    foundPerson = person;
+    break;
+  }
+}
+console.log(foundPerson);
 
