@@ -186,3 +186,40 @@ function creatingUsers(user:newUser):newUser{
   console.log(`${user.name.toUpperCase()} is father of jethalal`);
   return user;
 }
+
+
+// CHALLENGE
+
+type employee = {
+  id:number;
+  name:string;
+  department: string;
+};
+
+type manager ={
+  id : number;
+  name:string;
+  employees :employee[];
+};
+
+type Staff= manager|employee;
+function printStaffDetails(staff:Staff):void{
+if('employees' in staff){
+  console.log(`${staff.name} is an manager in the ${staff.employees.length} employees`);
+}else
+{
+  console.log(
+    `${staff.name} is an employee in the ${staff.department} department`
+  );
+}
+}
+
+
+const amit:employee={id:3435,name:"amit",department:"s/w"};
+const sumit:employee={id:57,name:"sumit",department:"n/w"};
+const namit:employee={id:754,name:"namit",department:"h/w"};
+
+const suresh:manager ={id :420,name:"suresh",employees:[amit,sumit,namit]}
+
+printStaffDetails(amit);
+// function printStaffDetails(input:staff)
