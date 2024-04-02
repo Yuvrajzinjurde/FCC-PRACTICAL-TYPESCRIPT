@@ -98,6 +98,29 @@ let items :{
 }[] =[book,pen,notebook]
 
 
+// FUNCTIONS
+
+function calculate(price:number):number{
+  return price*9;
+}
+const finalcost = calculate(5);
+console.log(finalcost);
+
+
+//CHALENGES
+
+let named:string[] = ['arjun','karan'];
+
+const name2:string = "karan";
+function namefinder(name:string)
+{
+  for(let nm of named){
+    if(nm ===name){
+      return true;
+      break;
+    }
+    }
+}
 
 
 
