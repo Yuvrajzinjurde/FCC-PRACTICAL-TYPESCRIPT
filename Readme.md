@@ -18,5 +18,8 @@
               Javascript Code (.js)
                 Runs Everywhere                  <-     Vanila Js Code
 
+
+  - Typescript is a dev dependency
+  
 - `REACT`
 - `STORE`
