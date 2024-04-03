@@ -298,3 +298,42 @@ upgradeRam(ammount) {
 laptop.storage = 512;
 console.log(laptop.upgradeRam(2));
 console.log(laptop);
+
+// INTERFACE INHERITANCE
+
+interface Person{
+name:string;
+getPersonDetails():string;
+}
+
+interface catOwner{
+  catname:StringConstructor;
+  getCatName():string;
+}
+
+interface Person{
+  age:number;
+}
+  const person:Person={
+    name:"shamu",
+    age :432,
+    getPersonDetails(){
+      return `name :${this.name},Age: ${this.age}`;
+    }
+  }
+  interface Employeee extends Person{
+    employeeId :number;
+  }
+  const employeee :Employeee={
+    name:"kate",
+    age :45,
+    employeeId:234,
+    getPersonDetails(){
+      return `Name ${this.employeeId} Employee ID ${this.employeeId}`;
+    }
+  }
+
+
+  // TUPLES AND ENUMS
+
+  
