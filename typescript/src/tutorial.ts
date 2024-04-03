@@ -163,12 +163,13 @@ function processaData(input :string | number,config:{reverse:boolean}={reverse:f
   
 }
 
-// console.log(processaData(10));
+console.log(processaData(10));
 // console.log(processaData("Yuvraj"));
 console.log(processaData('yuvraj',{reverse:true}));
+console.log(processaData('yuvraj',{reverse:false}));
 
 
-//ALIAS AND INTERFACES
+//TYPE ALIAS AND INTERFACES
 
 type newUser = {
   id:number;name:string;
@@ -188,6 +189,7 @@ function creatingUsers(user:newUser):newUser{
 }
 
 
+creatingUsers(ChampakLAL);
 // CHALLENGE
 
 type employee = {
@@ -223,3 +225,36 @@ const suresh:manager ={id :420,name:"suresh",employees:[amit,sumit,namit]}
 
 printStaffDetails(amit);
 // function printStaffDetails(input:staff)
+
+// TYPE INTERSECTION
+
+type book ={
+id:number,
+name:string,
+price:number
+
+}
+
+type discountedBook = 
+  book & {
+    discount:number
+  }
+
+const book1:book={
+id:23,
+name: 'how to cook dragon',
+price:4521
+}
+
+const book2:book={
+  id:23,
+  name:'the secret life of dragon',
+  price:45
+}
+
+const discountedBook:discountedBook ={
+  id:243,
+  name:'Game of thrones',
+  price:1000,
+  discount:0.45
+}
