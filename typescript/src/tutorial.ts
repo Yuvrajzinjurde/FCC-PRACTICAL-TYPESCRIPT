@@ -496,16 +496,29 @@ console.log(arrayStrings);
 console.log(arrayNumbers);
 
 // FETCH DATA
+
+import { z } from "zod";
+
 const url = "https://www.course-api.com/react-tours-project";
 
-type Tour = {
-  id: string;
-  name: string;
-  info: string;
-  image: string;
-  price: string;
-  something:boolean
-};
+const tourschema = z.object({
+  id: z.string(),
+  name: z.string(),
+  info: z.string(),
+  image: z.string(),
+  price: z.string(),
+});
+
+type Tour = z.infer<typeof tourschema>;
+
+// type Tour = {
+//   id: string;
+//   name: string;
+//   info: string;
+//   image: string;
+//   price: string;
+//   something:boolean
+// };
 
 async function fetchData(url: string): Promise<Tour[]> {
   try {
@@ -513,9 +526,17 @@ async function fetchData(url: string): Promise<Tour[]> {
     if (!response.ok) {
       throw new Error(`HTTP errr! status:${response.status}`);
     }
-    const data: Tour[] = await response.json();
-    console.log(data);
-    return data;
+    const rawData: Tour[] = await response.json();
+    const result = tourschema.array().safeParse(rawData);
+
+    console.log(result);
+
+    if (!result.success) {
+      throw new Error(`Invalid data :${result.error}`);
+    }
+
+    console.log(result.data);
+    return result.data;
   } catch (error) {
     const errorMsg =
       error instanceof Error ? error.message : "there was a big error :-)";
