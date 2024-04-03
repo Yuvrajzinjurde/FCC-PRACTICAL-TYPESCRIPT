@@ -418,3 +418,34 @@ const users:Users ={
   name:'prajwal',
   status:statusValue as Status
 };
+
+// NEVER
+
+type theme = 'light'|'dark';
+function ceckTheme(theme:theme):void{
+  if(theme==='light'){
+    console.log(('Light theme'));
+    return;
+  }
+  if(theme==='dark'){
+    console.log('dark theme');
+    return;
+  }
+  return;
+}
+enum Color{
+  red,
+  blue
+}
+
+function getColorName(color:Color){
+switch(color){
+  case Color.red:
+    return 'Its red';
+  case Color.blue:
+    return "Blue";
+  default:
+    throw new Error(`Unexpected color found :${color}`);
+}
+}
+console.log(getColorName(Color.red));

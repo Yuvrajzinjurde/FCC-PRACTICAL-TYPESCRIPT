@@ -69,7 +69,17 @@
             }
 
   - `KEY DIFFERENCES`
+
     - Type aliases can represent primitive types,union types,intersection types, tuples etc.., while interfaces are primariy used to represent the shape of an object.
+
+  - `UNKNOWN`
+
+    - it is a type-safe counterpart of the any type.
+    - its like saying that a variable could be anything but we need to perform some type-checking before we can use it .
+
+  - `NEVER`
+
+    - never is a type that represent the type of values that never occur. you can't assign any value to a vaiable os a type never. Typscript will give a compile error if there are any unhandled cases, helping ensure that all cases are hndled
 
 - `REACT`
 - `STORE`
