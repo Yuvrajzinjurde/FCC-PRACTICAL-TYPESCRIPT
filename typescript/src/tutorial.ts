@@ -567,3 +567,5 @@ class Person implements IPerson {
 
 const hipster = new Person("shakeAndBake", 100);
 hipster.greethim();
+
+
