@@ -336,4 +336,85 @@ interface Person{
 
   // TUPLES AND ENUMS
 
-  
+  enum serverResponseStatus{
+    success,
+    error
+  }
+  console.log(serverResponseStatus);
+  interface serverResponse{
+    result :serverResponseStatus;
+    data:string[];
+  }
+
+  function getServerResponse():serverResponse{
+    return{
+      result:serverResponseStatus.success,
+      data:['first','second'],
+    };
+  }
+
+
+  // CHALLENGE
+
+  enum UserRole{
+    admin,
+    Manager,
+    Employee
+  }
+
+  type User={
+    id:number;
+    name:string;
+    role:UserRole;
+    contact:[string,string];
+  };
+  function createUser(user:User):User{
+    return user;
+  }
+
+  const user:User= createUser({
+    id:23,
+    name:'salman khan',
+    role:UserRole.admin,
+    contact: ['user@account','2349528']
+  });
+
+
+// TYPE UNKNOWN    --ANY
+
+let something:any = "this is anything";
+let strLength:number = (something as string).length;
+
+type Bird ={
+  name:string;
+};
+
+let birdString ='{"name":"Eagle"}';
+let dogString ='{"breed":"poodle"}';
+
+let birdObject =      JSON.parse(birdString);
+let dogObject =      JSON.parse(dogString);
+
+let bird = birdObject as Bird;
+let dog = dogObject as Bird;
+
+
+console.log(bird.name);
+console.log(dog.name);
+
+
+enum Status{
+  pending = "pending",
+  declined = "declined"
+}
+
+type Users={
+name:string,
+status:Status;
+};
+
+const statusValue = "Pending";
+const users:Users ={
+  name:'prajwal',
+  status:statusValue as Status
+};
