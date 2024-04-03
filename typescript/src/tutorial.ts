@@ -422,7 +422,7 @@ const users:Users ={
 // NEVER
 
 type theme = 'light'|'dark';
-function ceckTheme(theme:theme):void{
+function checkTheme(theme:theme):void{
   if(theme==='light'){
     console.log(('Light theme'));
     return;
@@ -449,3 +449,17 @@ switch(color){
 }
 }
 console.log(getColorName(Color.red));
+
+// MODULES
+
+import newStudent, {saySomething, person as personss, type Student} from "./action";
+
+saySomething("Typescript is mood");
+console.log(newStudent);
+console.log(personss);
+
+const anotherStudent:Student={
+  name:"bavri",
+  age:25,
+};
+console.log(anotherStudent);
