@@ -463,3 +463,29 @@ const anotherStudent:Student={
   age:25,
 };
 console.log(anotherStudent);
+
+// TYPE PREDICATE
+
+try{
+  throw 'something wrong ';
+    throw new Error("this is also error");
+}catch(error){
+  if(error instanceof Error){
+    console.log(`caught an error object :${error.message}`);
+  }else{
+    console.log('Unknown error...');
+  }
+}
+
+function checkInput(input:Date|string){
+  if(input instanceof Date){
+    return input.getFullYear().toString();
+  }
+  return input;
+}
+
+const year = checkInput(new Date());
+const random = checkInput('2020-05-05');
+
+console.log(year);
+console.log(random);
