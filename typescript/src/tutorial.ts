@@ -258,3 +258,22 @@ const discountedBook:discountedBook ={
   price:1000,
   discount:0.45
 }
+
+
+
+// INTERFACE FUNDAMENTALS
+
+  interface Book {
+    readonly isbn:number;
+    title:string;
+    author :string;
+    genre?:string;   //Optional property
+  }
+
+  const wingsOfFire:Book={
+    isbn:2453462346,
+    title:"Wings-of-fire",
+    author:'A.P.J. Abdul kalam',
+    genre :'biography'
+  };
+

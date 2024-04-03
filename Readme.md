@@ -28,5 +28,10 @@
     - WE can create arrays of defferent data types.
     - Values can not be assigned to the arrays of type empty array or object.
 
+  - `Interface - Fundamentals`
+
+    - Allows to setup shape for objects (only objects)
+    
+
 - `REACT`
 - `STORE`
