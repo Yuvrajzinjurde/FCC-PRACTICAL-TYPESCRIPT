@@ -298,24 +298,24 @@ interface catOwner {
 interface Person {
   age: number;
 }
-const person: Person = {
-  name: "shamu",
-  age: 432,
-  getPersonDetails() {
-    return `name :${this.name},Age: ${this.age}`;
-  },
-};
-interface Employeee extends Person {
-  employeeId: number;
-}
-const employeee: Employeee = {
-  name: "kate",
-  age: 45,
-  employeeId: 234,
-  getPersonDetails() {
-    return `Name ${this.employeeId} Employee ID ${this.employeeId}`;
-  },
-};
+// const person1: Person = {
+//   name: "shamu",
+//   age: 432,
+//   getPersonDetails() {
+//     return `name :${this.name},Age: ${this.age}`;
+//   },
+// };
+// interface Employeee extends Person {
+//   employeeId: number;
+// }
+// const employeee: Employeee = {
+//   name: "kate",
+//   age: 45,
+//   employeeId: 234,
+//   getPersonDetails() {
+//     return `Name ${this.employeeId} Employee ID ${this.employeeId}`;
+//   },
+// };
 
 // TUPLES AND ENUMS
 
@@ -549,3 +549,21 @@ console.log(tours);
 tours.map((tour) => {
   console.log(tour.name);
 });
+
+// CLASSES
+
+interface IPerson {
+  name: string;
+  age: number;
+  greethim(): void;
+}
+
+class Person implements IPerson {
+  constructor(public name: string, public age: number) {}
+  greethim(): void {
+    console.log(`Hello coditas Im ${this.name} and i'm ${this.age} years old`);
+  }
+}
+
+const hipster = new Person("shakeAndBake", 100);
+hipster.greethim();
