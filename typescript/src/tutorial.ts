@@ -277,3 +277,24 @@ const discountedBook:discountedBook ={
     genre :'biography'
   };
 
+// CHALLENGE
+
+interface Computer{
+  readonly id :number;
+  brand:string;
+  ram:number;
+  upgradeRam(increase:number):number;
+  storage?:number;
+}
+const laptop:Computer={
+id:3432,
+brand :"Lenovo",
+ram :4,
+upgradeRam(ammount) {
+    this.ram +=ammount;
+    return this.ram;  
+},
+}
+laptop.storage = 512;
+console.log(laptop.upgradeRam(2));
+console.log(laptop);
